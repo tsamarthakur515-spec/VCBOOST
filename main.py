@@ -33,7 +33,7 @@ async def boost_on(_, msg: Message):
     # bass=g={UKHI_LEVEL*2} -> Bhari Bass
     # volume={UKHI_LEVEL} -> Loudness
     # aecho -> Wo 'Goonjti' hui ukhi awaz
-    filt = f"bass=g={UKHI_LEVEL*2},volume={UKHI_LEVEL},aecho=0.8:0.8:40:0.5"
+    filt = f"bass=g={UKHI_LEVEL},volume={UKHI_LEVEL/2},aecho=0.8:0.8:40:0.4"
 
     try:
         await call.join_group_call(
