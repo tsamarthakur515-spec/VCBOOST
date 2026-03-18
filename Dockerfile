@@ -19,5 +19,4 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Cloud platforms par PulseAudio ko bina root-check ke chalane ka setup
-CMD pulseaudio -D --exit-idle-time=-1 --disallow-exit --raw --no-cpu-limit && \
-    python main.py
+CMD pulseaudio --daemonize=yes --exit-idle-time=-1 && python main.py
